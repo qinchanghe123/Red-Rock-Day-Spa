@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Rock Day Spa | Massage in St. George, UT</title>
+  <meta name="description" content="Red Rock Day Spa in St. George, UT offers Swedish massage, deep tissue massage, combo massage, aromatherapy, foot soak/reflexology and cupping." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rose: #c14384;
+      --rose-deep: #9f2f6d;
+      --rose-soft: #f8dceb;
+      --coral: #d8644d;
+      --cream: #fff8f5;
+      --linen: #f8f1ed;
+      --ink: #251824;
+      --muted: #725b67;
+      --teal: #5c8b87;
+      --teal-dark: #27555d;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(98, 45, 75, .18);
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(248, 220, 235, .75), transparent 32rem),
+        linear-gradient(180deg, #fffaf8 0%, #fff 52%, #fff8fb 100%);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section {
+      position: relative;
+      padding: 110px 0;
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding: 8px 14px;
+      border: 1px solid rgba(193, 67, 132, .22);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .72);
+      color: var(--rose-deep);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      box-shadow: 0 12px 32px rgba(193, 67, 132, .08);
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.25rem, 5vw, 4.6rem);
+      line-height: .98;
+      letter-spacing: -.045em;
+      color: var(--ink);
+    }
+
+    .section-lead {
+      max-width: 700px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.7vw, 1.16rem);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 24px;
+      border: 0;
+      border-radius: 999px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--rose), var(--coral));
+      box-shadow: 0 18px 40px rgba(193, 67, 132, .32);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 26px 54px rgba(193, 67, 132, .42);
+    }
+
+    .btn-ghost {
+      color: var(--rose-deep);
+      background: rgba(255, 255, 255, .72);
+      border: 1px solid rgba(193, 67, 132, .18);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      position: fixed;
+      inset: 18px 0 auto 0;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .nav-inner {
+      pointer-events: auto;
+      width: min(1180px, calc(100% - 30px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 12px 14px 12px 18px;
+      border: 1px solid rgba(255, 255, 255, .52);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .78);
+      box-shadow: 0 18px 55px rgba(62, 26, 48, .16);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      color: var(--rose-deep);
+      letter-spacing: -.03em;
+      white-space: nowrap;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      padding: 10px 13px;
+      border-radius: 999px;
+      color: #4a3540;
+      font-size: .92rem;
+      font-weight: 700;
+      transition: color .2s ease, background .2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--rose-deep);
+      background: rgba(193, 67, 132, .08);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--rose);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin: 4px auto;
+      background: currentColor;
+      border-radius: 99px;
+    }
+
+    .hero {
+      min-height: 100svh;
+      position: relative;
+      display: grid;
+      place-items: center;
+      padding: 130px 0 80px;
+      overflow: hidden;
+      color: #fff;
+      isolation: isolate;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      overflow: hidden;
+    }
+
+    .hero-bg span {
+      position: absolute;
+      inset: -5%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transform: scale(1.08);
+      animation: heroFade 24s infinite;
+      will-change: opacity, transform;
+    }
+
+    .hero-bg span:nth-child(1) {
+      background-image: url("https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg");
+      animation-delay: 0s;
+    }
+
+    .hero-bg span:nth-child(2) {
+      background-image: url("https://i.pinimg.com/736x/a4/c5/f0/a4c5f0fb2704f75aa94a247e18a4af14.jpg");
+      animation-delay: 6s;
+    }
+
+    .hero-bg span:nth-child(3) {
+      background-image: url("https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg");
+      animation-delay: 12s;
+    }
+
+    .hero-bg span:nth-child(4) {
+      background-image: url("https://i.pinimg.com/1200x/96/7b/80/967b808ebf41031000d156132e989aee.jpg");
+      animation-delay: 18s;
+    }
+
+    @keyframes heroFade {
+      0%, 100% { opacity: 0; transform: scale(1.08) translateY(0); }
+      8%, 25% { opacity: 1; transform: scale(1) translateY(-12px); }
+      33% { opacity: 0; transform: scale(1.05) translateY(-22px); }
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(circle at 78% 20%, rgba(193, 67, 132, .62), transparent 26rem),
+        linear-gradient(90deg, rgba(34, 16, 27, .82), rgba(63, 28, 49, .56) 48%, rgba(193, 67, 132, .2));
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -5% -9% -5%;
+      height: 250px;
+      z-index: -1;
+      background: linear-gradient(0deg, #fffaf8 10%, rgba(255, 250, 248, .72) 42%, transparent);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 390px;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 9px 15px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .18);
+      border: 1px solid rgba(255, 255, 255, .25);
+      backdrop-filter: blur(14px);
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .78rem;
+    }
+
+    .hero h1 {
+      margin-top: 22px;
+      max-width: 760px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3.2rem, 8.6vw, 8rem);
+      line-height: .86;
+      letter-spacing: -.07em;
+    }
+
+    .hero p {
+      max-width: 610px;
+      margin: 28px 0 34px;
+      color: rgba(255, 255, 255, .9);
+      font-size: clamp(1.06rem, 2vw, 1.34rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 26px;
+      border: 1px solid rgba(255, 255, 255, .32);
+      border-radius: 34px;
+      background: rgba(255, 255, 255, .16);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, .24);
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      right: -52px;
+      top: -52px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .18);
+    }
+
+    .hero-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      display: grid;
+      gap: 13px;
+      color: rgba(255, 255, 255, .91);
+    }
+
+    .hero-card li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .hero-card li::before {
+      content: "✦";
+      color: #ffd8ea;
+      flex: 0 0 auto;
+    }
+
+    .floating-petal {
+      position: absolute;
+      width: 86px;
+      height: 86px;
+      border-radius: 70% 10% 70% 10%;
+      background: linear-gradient(135deg, rgba(255, 177, 214, .95), rgba(193, 67, 132, .35));
+      filter: blur(.2px);
+      opacity: .42;
+      pointer-events: none;
+    }
+
+    .petal-1 {
+      right: 8%;
+      top: 18%;
+      transform: rotate(32deg);
+    }
+
+    .petal-2 {
+      left: 7%;
+      bottom: 16%;
+      width: 58px;
+      height: 58px;
+      transform: rotate(-28deg);
+    }
+
+    .petal-3 {
+      right: 24%;
+      bottom: 7%;
+      width: 44px;
+      height: 44px;
+      transform: rotate(82deg);
+    }
+
+    .about {
+      background:
+        radial-gradient(circle at 8% 10%, rgba(193, 67, 132, .09), transparent 30rem),
+        linear-gradient(180deg, #fffaf8, #fff);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+      min-height: 560px;
+      border-radius: 42px;
+      overflow: hidden;
+      background: linear-gradient(145deg, #fce7f0, #fff7f3 48%, #d8efec);
+      box-shadow: var(--shadow);
+    }
+
+    .about-visual::before {
+      content: "";
+      position: absolute;
+      inset: 26px;
+      border: 1px solid rgba(193, 67, 132, .18);
+      border-radius: 34px;
+      background:
+        linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.45)),
+        url("https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg") center/cover;
+      box-shadow: inset 0 0 0 999px rgba(255, 255, 255, .08);
+    }
+
+    .about-visual .glass-note {
+      position: absolute;
+      left: 42px;
+      right: 42px;
+      bottom: 42px;
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, .78);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(37, 24, 36, .16);
+    }
+
+    .glass-note strong {
+      color: var(--rose-deep);
+      font-size: 1.15rem;
+    }
+
+    .about-copy {
+      display: grid;
+      gap: 20px;
+    }
+
+    .about-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .point-card {
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, .72);
+      border: 1px solid rgba(193, 67, 132, .13);
+      box-shadow: 0 18px 50px rgba(193, 67, 132, .09);
+    }
+
+    .point-card span {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 12px;
+      border-radius: 15px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--rose), var(--coral));
+      font-weight: 900;
+    }
+
+    .services {
+      background:
+        linear-gradient(180deg, #fff, #fff7fb),
+        radial-gradient(circle at 90% 0%, rgba(92, 139, 135, .12), transparent 28rem);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 44px;
+    }
+
+    .promo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      color: var(--rose-deep);
+      background: rgba(248, 220, 235, .65);
+      border: 1px solid rgba(193, 67, 132, .2);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      border-radius: 32px;
+      background: rgba(255, 255, 255, .84);
+      border: 1px solid rgba(193, 67, 132, .12);
+      box-shadow: 0 24px 70px rgba(77, 36, 58, .12);
+      overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 34px 85px rgba(77, 36, 58, .19);
+    }
+
+    .service-media {
+      position: relative;
+      height: 238px;
+      overflow: hidden;
+      background: var(--rose-soft);
+    }
+
+    .carousel {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+
+    .carousel-track img {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .carousel[data-count="3"] .carousel-track {
+      animation: slide3 15s infinite ease-in-out;
+    }
+
+    .carousel[data-count="4"] .carousel-track {
+      animation: slide4 18s infinite ease-in-out;
+    }
+
+    .carousel[data-count="5"] .carousel-track {
+      animation: slide5 22s infinite ease-in-out;
+    }
+
+    .carousel[data-count="6"] .carousel-track {
+      animation: slide6 26s infinite ease-in-out;
+    }
+
+    @keyframes slide3 {
+      0%, 26% { transform: translateX(0); }
+      33%, 59% { transform: translateX(-100%); }
+      66%, 92% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes slide4 {
+      0%, 18% { transform: translateX(0); }
+      25%, 43% { transform: translateX(-100%); }
+      50%, 68% { transform: translateX(-200%); }
+      75%, 93% { transform: translateX(-300%); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes slide5 {
+      0%, 15% { transform: translateX(0); }
+      20%, 35% { transform: translateX(-100%); }
+      40%, 55% { transform: translateX(-200%); }
+      60%, 75% { transform: translateX(-300%); }
+      80%, 95% { transform: translateX(-400%); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes slide6 {
+      0%, 12% { transform: translateX(0); }
+      16%, 28% { transform: translateX(-100%); }
+      32%, 44% { transform: translateX(-200%); }
+      48%, 60% { transform: translateX(-300%); }
+      64%, 76% { transform: translateX(-400%); }
+      80%, 94% { transform: translateX(-500%); }
+      100% { transform: translateX(0); }
+    }
+
+    .service-media::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 45%;
+      background: linear-gradient(0deg, rgba(37, 24, 36, .35), transparent);
+      pointer-events: none;
+    }
+
+    .service-badge {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      z-index: 2;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(193, 67, 132, .86);
+      backdrop-filter: blur(10px);
+      font-size: .8rem;
+      font-weight: 900;
+    }
+
+    .service-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 24px;
+    }
+
+    .service-body h3 {
+      font-size: 1.35rem;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      color: var(--muted);
+      font-size: .96rem;
+      margin-bottom: 18px;
+    }
+
+    .price-list {
+      margin-top: auto;
+      display: grid;
+      gap: 9px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 11px 13px;
+      border-radius: 14px;
+      background: rgba(248, 220, 235, .45);
+      color: #4c2b3d;
+      font-weight: 800;
+    }
+
+    .price-row small {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .price-row strong {
+      color: var(--rose-deep);
+      font-size: 1.06rem;
+    }
+
+    .video-section {
+      background:
+        radial-gradient(circle at 12% 18%, rgba(193, 67, 132, .14), transparent 32rem),
+        radial-gradient(circle at 88% 80%, rgba(92, 139, 135, .14), transparent 30rem),
+        linear-gradient(180deg, #fff7fb, #fff8f5);
+      padding-top: 90px;
+    }
+
+    .video-shell {
+      position: relative;
+      margin-top: 44px;
+      border-radius: 42px;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(193, 67, 132, .18), rgba(216, 100, 77, .12));
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(193, 67, 132, .16);
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-shell iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .video-brand-badge {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      z-index: 3;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px 12px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(255,255,255,.76), rgba(248,220,235,.54));
+      border: 1px solid rgba(255,255,255,.64);
+      box-shadow: 0 18px 48px rgba(37, 24, 36, .18);
+      backdrop-filter: blur(18px);
+      color: var(--rose-deep);
+      font-weight: 900;
+      letter-spacing: -.02em;
+    }
+
+    .video-brand-badge img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: rgba(255,255,255,.6);
+    }
+
+    .booking {
+      background:
+        radial-gradient(circle at 4% 50%, rgba(193, 67, 132, .12), transparent 30rem),
+        linear-gradient(135deg, #fff8f5, #fdf1f7);
+    }
+
+    .booking-card {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 28px;
+      align-items: stretch;
+      padding: 28px;
+      border-radius: 40px;
+      border: 1px solid rgba(193, 67, 132, .14);
+      background: rgba(255, 255, 255, .72);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .booking-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 36px;
+      border-radius: 30px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(255,255,255,.2), transparent 14rem),
+        linear-gradient(135deg, var(--rose-deep), var(--coral));
+    }
+
+    .booking-panel h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: .95;
+      letter-spacing: -.05em;
+      margin-bottom: 18px;
+    }
+
+    .booking-panel p {
+      color: rgba(255,255,255,.88);
+      max-width: 500px;
+      margin-bottom: 28px;
+    }
+
+    .booking-list {
+      display: grid;
+      gap: 14px;
+      list-style: none;
+      color: rgba(255,255,255,.92);
+      font-weight: 700;
+    }
+
+    .booking-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .booking-list li::before {
+      content: "✓";
+      display: inline-grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: rgba(255,255,255,.18);
+    }
+
+    .booking-embed-wrap {
+      min-height: 760px;
+      border-radius: 30px;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid rgba(193, 67, 132, .12);
+      box-shadow: 0 18px 45px rgba(193, 67, 132, .09);
+    }
+
+    .booking-embed-wrap iframe {
+      width: 100%;
+      height: 760px;
+      border: 0;
+      display: block;
+      background: #fff;
+    }
+
+    .booking-fallback {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+      align-items: center;
+    }
+
+    #reviews {
+      background:
+        radial-gradient(circle at 82% 10%, rgba(193, 67, 132, .1), transparent 28rem),
+        linear-gradient(180deg, #fff7fb, #fff);
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+
+    #reviews h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.3rem, 5vw, 4.4rem);
+      letter-spacing: -.05em;
+      color: var(--ink);
+      line-height: 1.08;
+      margin-bottom: 1rem;
+    }
+
+    .reviews-head {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .reviews-head p {
+      color: #4b5563;
+      font-size: 1.125rem;
+    }
+
+    .reviews-source-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 26px;
+    }
+
+    .review-card-source {
+      border-radius: 24px;
+      padding: 1.5rem;
+      background: rgba(255,255,255,.84);
+      border: 1px solid rgba(193, 67, 132, .12);
+      box-shadow: 0 18px 48px rgba(77, 36, 58, .1);
+      backdrop-filter: blur(12px);
+      transition: box-shadow .2s ease, transform .2s ease;
+    }
+
+    .review-card-source:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 28px 60px rgba(45, 25, 40, .16);
+    }
+
+    .review-user {
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+      margin-bottom: 1rem;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .avatar {
+      display: flex;
+      width: 2.5rem;
+      height: 2.5rem;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #ffedd5;
+      color: #374151;
+      font-size: .875rem;
+      font-weight: 700;
+    }
+
+    .google-dot {
+      position: absolute;
+      right: -.25rem;
+      bottom: -.25rem;
+      display: flex;
+      width: 1.25rem;
+      height: 1.25rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: #fff;
+      box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    }
+
+    .google-dot svg {
+      width: .75rem;
+      height: .75rem;
+    }
+
+    .review-name-row {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      min-width: 0;
+    }
+
+    .review-name {
+      font-weight: 800;
+      color: #111827;
+      font-size: .875rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .review-time {
+      color: #6b7280;
+      font-size: .75rem;
+      margin-top: .125rem;
+    }
+
+    .verify {
+      width: 1rem;
+      height: 1rem;
+      color: #3b82f6;
+      flex-shrink: 0;
+    }
+
+    .stars {
+      color: #f3b43f;
+      letter-spacing: .1em;
+      font-size: .85rem;
+      margin-bottom: .75rem;
+    }
+
+    .review-text {
+      color: #374151;
+      font-size: .875rem;
+      line-height: 1.625;
+    }
+
+    .review-summary-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        radial-gradient(circle at top right, rgba(248, 220, 235, .9), transparent 10rem),
+        #fff;
+    }
+
+    .review-rating {
+      font-size: 2.25rem;
+      line-height: 1;
+      font-weight: 900;
+      color: #111827;
+    }
+
+    .review-summary-card small {
+      color: #4b5563;
+    }
+
+    .review-summary-google {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      margin: 1rem 0;
+      color: #374151;
+      font-size: .875rem;
+    }
+
+    .review-summary-google svg {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .review-summary-card a {
+      color: #2563eb;
+      font-size: .875rem;
+      font-weight: 700;
+    }
+
+    .marquee-wrap {
+      margin-top: 54px;
+      overflow: hidden;
+      display: grid;
+      gap: 18px;
+      mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    }
+
+    .marquee-row {
+      display: flex;
+      gap: 18px;
+      width: max-content;
+      animation: marquee-left 38s linear infinite;
+    }
+
+    .marquee-row.reverse {
+      animation: marquee-right 42s linear infinite;
+    }
+
+    .mini-review {
+      width: min(380px, calc(100vw - 70px));
+      flex: 0 0 auto;
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(193, 67, 132, .13);
+      box-shadow: 0 16px 44px rgba(77, 36, 58, .09);
+    }
+
+    .mini-review strong {
+      color: var(--ink);
+    }
+
+    .mini-review p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    @keyframes marquee-left {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes marquee-right {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    .faqs {
+      background:
+        radial-gradient(circle at 10% 20%, rgba(92, 139, 135, .12), transparent 28rem),
+        linear-gradient(180deg, #fff, #fff8f5);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .accordion {
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      border-radius: 24px;
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(193, 67, 132, .13);
+      box-shadow: 0 18px 44px rgba(77, 36, 58, .08);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 24px;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 900;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-question span:last-child {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--rose);
+      transition: transform .25s ease;
+      flex: 0 0 auto;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+    }
+
+    .faq-answer p {
+      padding: 0 24px 22px;
+      color: var(--muted);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 180px;
+    }
+
+    .faq-item.active .faq-question span:last-child {
+      transform: rotate(45deg);
+    }
+
+    .contact {
+      background: linear-gradient(180deg, #fff8f5, #251824);
+      color: #fff;
+      padding-bottom: 0;
+    }
+
+    .contact .section-title,
+    .contact .section-lead {
+      color: #fff;
+    }
+
+    .contact .section-lead {
+      color: rgba(255,255,255,.76);
+    }
+
+    .contact-card {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 24px;
+      padding: 24px;
+      border-radius: 40px;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255,255,255,.16);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 28px 90px rgba(0, 0, 0, .26);
+    }
+
+    .contact-info {
+      padding: 26px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .info-block {
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    .info-block span {
+      display: block;
+      margin-bottom: 5px;
+      color: #ffd8ea;
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-weight: 900;
+    }
+
+    .info-block strong,
+    .info-block a {
+      font-size: 1.12rem;
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .map {
+      min-height: 470px;
+      overflow: hidden;
+      border-radius: 30px;
+      background: #fff;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 470px;
+      border: 0;
+      filter: saturate(.95) contrast(1.02);
+    }
+
+    footer {
+      padding: 34px 0;
+      color: rgba(255,255,255,.6);
+      text-align: center;
+      background: #251824;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(34px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .split,
+      .booking-card,
+      .faq-grid,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 520px;
+      }
+
+      .service-grid,
+      .reviews-source-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .about-visual {
+        min-height: 470px;
+      }
+
+      .booking-embed-wrap,
+      .booking-embed-wrap iframe {
+        min-height: 700px;
+        height: 700px;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .nav-inner {
+        border-radius: 26px;
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .nav-links {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        padding: 8px 0 2px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        justify-content: center;
+        padding: 12px;
+        background: rgba(193, 67, 132, .06);
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 145px;
+        text-align: center;
+      }
+
+      .hero-grid {
+        gap: 28px;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-card {
+        text-align: left;
+      }
+
+      .section {
+        padding: 84px 0;
+      }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .service-grid,
+      .reviews-source-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-media {
+        height: 230px;
+      }
+
+      .about-points {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-panel,
+      .contact-info {
+        padding: 24px;
+      }
+
+      .map,
+      .map iframe {
+        min-height: 360px;
+      }
+
+      .video-shell {
+        border-radius: 28px;
+      }
+
+      .video-brand-badge {
+        top: 14px;
+        left: 14px;
+        padding: 9px 12px 9px 9px;
+        font-size: .9rem;
+      }
+
+      .video-brand-badge img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(100% - 28px, var(--container));
+      }
+
+      .brand {
+        font-size: .94rem;
+      }
+
+      .brand-logo {
+        width: 36px;
+        height: 36px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.1rem, 18vw, 4.7rem);
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-actions {
+        width: 100%;
+      }
+
+      .hero-card,
+      .booking-card,
+      .contact-card {
+        border-radius: 28px;
+      }
+
+      .service-body {
+        padding: 20px;
+      }
+
+      .price-row {
+        font-size: .93rem;
+      }
+
+      #reviews {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+
+      .booking-embed-wrap,
+      .booking-embed-wrap iframe {
+        min-height: 650px;
+        height: 650px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .001ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#home" aria-label="Red Rock Day Spa home">
+        <img class="brand-logo" src="./logo.png" alt="Red Rock Day Spa logo">
+        Red Rock Day Spa
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" type="button">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a class="btn btn-primary nav-cta" href="#booking">Book Now</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-bg" data-speed="-0.12">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <i class="floating-petal petal-1" data-speed="0.18"></i>
+      <i class="floating-petal petal-2" data-speed="-0.08"></i>
+      <i class="floating-petal petal-3" data-speed="0.12"></i>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="hero-kicker">Open 7 Days · St. George, UT</div>
+          <h1>Relax deeper. Feel renewed.</h1>
+          <p>
+            A calm, private day spa experience for soothing bodywork, deep relief,
+            foot reflexology, aromatherapy and focused cupping care.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#booking">Book Now</a>
+            <a class="btn btn-ghost" href="#services">View Pricing</a>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal" data-speed="0.04">
+          <h3>Today’s spa mood</h3>
+          <ul>
+            <li>Quiet private rooms designed for comfort and calm.</li>
+            <li>Free hot stone offered with many massage sessions.</li>
+            <li>Simple pricing, long opening hours, easy online booking.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container split">
+        <div class="about-visual reveal" data-speed="-0.04">
+          <div class="glass-note">
+            <strong>Clean, private and peaceful.</strong>
+            <p>Every detail is designed to help you slow down, breathe, and leave feeling lighter.</p>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <div>
+            <span class="eyebrow">About Us</span>
+            <h2 class="section-title">A quiet retreat for body and mind.</h2>
+            <p class="section-lead">
+              Red Rock Day Spa is built around a simple idea: a massage space should feel
+              clean, private and deeply relaxing from the moment you walk in. Our rooms are
+              calm, comfortable and prepared for focused care, whether you need gentle stress
+              relief or deeper muscle work.
+            </p>
+          </div>
+
+          <div class="about-points">
+            <div class="point-card">
+              <span>01</span>
+              <h3>Private Rooms</h3>
+              <p>Enjoy a quiet, personal treatment space with a soothing spa atmosphere.</p>
+            </div>
+            <div class="point-card">
+              <span>02</span>
+              <h3>Calm Design</h3>
+              <p>Soft colors, gentle textures and a relaxed pace support a restorative visit.</p>
+            </div>
+            <div class="point-card">
+              <span>03</span>
+              <h3>Clean Comfort</h3>
+              <p>Fresh, tidy rooms and simple service flow help you feel at ease.</p>
+            </div>
+            <div class="point-card">
+              <span>04</span>
+              <h3>Relaxation First</h3>
+              <p>Each session is centered on comfort, relief and a more balanced body.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Services & Pricing</span>
+            <h2 class="section-title">Massage menu</h2>
+            <p class="section-lead">
+              Choose the session that fits your body today. Pricing below follows the current
+              Red Rock Day Spa menu.
+            </p>
+          </div>
+          <div class="promo-pill">FREE Hot Stone</div>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="service-media">
+              <span class="service-badge">Free Guasha</span>
+              <div class="carousel" data-count="3" aria-label="Swedish massage image carousel">
+                <div class="carousel-track">
+                  <img src="https://i.pinimg.com/736x/8f/b5/1c/8fb51ca15de5bb5bb4f3f467723ebf06.jpg" alt="Swedish massage relaxing spa treatment">
+                  <img src="https://i.pinimg.com/1200x/c7/d0/d5/c7d0d5e303426f8fdc457215d4158adc.jpg" alt="Swedish massage body relaxation">
+                  <img src="https://i.pinimg.com/1200x/49/d5/f5/49d5f523bd51c351ae1f0646722aee3e.jpg" alt="Swedish massage calm bodywork">
+                </div>
+              </div>
+            </div>
+            <div class="service-body">
+              <h3>Swedish Massage</h3>
+              <p class="service-desc">
+                A smooth, relaxing massage for everyday stress, general tightness and whole-body comfort.
+                Ideal when you want to unwind without intense pressure.
+              </p>
+              <div class="price-list">
+                <div class="price-row"><span>30 min</span><strong>$50</strong></div>
+                <div class="price-row"><span>60 min</span><strong>$80</strong></div>
+                <div class="price-row"><span>75 min</span><strong>$100</strong></div>
+                <div class="price-row"><span>90 min</span><strong>$120</strong></div>
+                <div class="price-row"><span>120 min</span><strong>$160</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-media">
+              <span class="service-badge">Free Cupping + Guasha</span>
+              <div class="carousel" data-count="4" aria-label="Deep tissue massage image carousel">
+                <div class="carousel-track">
+                  <img src="https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg" alt="Deep tissue massage pressure work">
+                  <img src="https://i.pinimg.com/736x/a4/c5/f0/a4c5f0fb2704f75aa94a247e18a4af14.jpg" alt="Deep tissue massage for back tension">
+                  <img src="https://i.pinimg.com/736x/85/e4/e0/85e4e0455458e84ff5b39582cf45a340.jpg" alt="Deep tissue massage therapy session">
+                  <img src="https://i.pinimg.com/1200x/cb/a2/38/cba2382cc3ca28d467b85d939121c8ef.jpg" alt="Deep tissue massage focused bodywork">
+                </div>
+              </div>
+            </div>
+            <div class="service-body">
+              <h3>Deep Tissue Massage</h3>
+              <p class="service-desc">
+                Firm, focused pressure for persistent knots, heavy muscle tension and stiffness from work,
+                travel or activity.
+              </p>
+              <div class="price-list">
+                <div class="price-row"><span>30 min</span><strong>$60</strong></div>
+                <div class="price-row"><span>60 min</span><strong>$90</strong></div>
+                <div class="price-row"><span>75 min</span><strong>$120</strong></div>
+                <div class="price-row"><span>90 min</span><strong>$140</strong></div>
+                <div class="price-row"><span>120 min</span><strong>$180</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-media">
+              <span class="service-badge">Free Guasha</span>
+              <div class="carousel" data-count="5" aria-label="Combo massage image carousel">
+                <div class="carousel-track">
+                  <img src="https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg" alt="Combo massage foot reflexology">
+                  <img src="https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg" alt="Combo massage back bodywork">
+                  <img src="https://i.pinimg.com/1200x/96/7b/80/967b808ebf41031000d156132e989aee.jpg" alt="Combo massage essential oil relaxation">
+                  <img src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Combo massage soothing bodywork">
+                  <img src="https://i.pinimg.com/1200x/71/a4/b7/71a4b75a19fbadf33bc6dc340e91340c.jpg" alt="Combo massage foot soak reflexology">
+                </div>
+              </div>
+            </div>
+            <div class="service-body">
+              <h3>Combo Massage</h3>
+              <p class="service-desc">
+                Foot soak/reflexology plus back essential oil work to clear the meridians.
+                A balanced choice for guests who want both foot comfort and back relaxation.
+              </p>
+              <div class="price-list">
+                <div class="price-row"><span>60 min</span><strong>$90</strong></div>
+                <div class="price-row"><span>90 min</span><strong>$140</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-media">
+              <span class="service-badge">Free Guasha</span>
+              <div class="carousel" data-count="6" aria-label="Aromatherapy massage image carousel">
+                <div class="carousel-track">
+                  <img src="https://i.pinimg.com/1200x/96/7b/80/967b808ebf41031000d156132e989aee.jpg" alt="Aromatherapy massage essential oil treatment">
+                  <img src="https://i.pinimg.com/736x/2e/f6/09/2ef6093ece03f0503004090f99eef2e4.jpg" alt="Aromatherapy massage calm spa">
+                  <img src="https://i.pinimg.com/736x/82/14/59/8214594dbae377c242a95acc29bd29d4.jpg" alt="Aromatherapy massage oil relaxation">
+                  <img src="https://i.pinimg.com/736x/b7/76/b4/b776b4110a52d54ad44d82de79d1b7fc.jpg" alt="Aromatherapy massage essential oil care">
+                  <img src="https://i.pinimg.com/736x/7b/26/1e/7b261e545282c832243d6caf9b21c822.jpg" alt="Aromatherapy massage soothing treatment">
+                  <img src="https://i.pinimg.com/736x/3f/8c/a2/3f8ca2a11949871ac4e201e5ce48c330.jpg" alt="Aromatherapy massage spa comfort">
+                </div>
+              </div>
+            </div>
+            <div class="service-body">
+              <h3>Aromatherapy</h3>
+              <p class="service-desc">
+                Essential oil massage designed for soothing comfort, gentle circulation support and a
+                calm sensory experience.
+              </p>
+              <div class="price-list">
+                <div class="price-row"><span>30 min <small>head, neck, arm, hand</small></span><strong>$60</strong></div>
+                <div class="price-row"><span>60 min <small>full body essential oil</small></span><strong>$100</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-media">
+              <span class="service-badge">Foot Care</span>
+              <div class="carousel" data-count="5" aria-label="Foot soak and reflexology image carousel">
+                <div class="carousel-track">
+                  <img src="https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg" alt="Foot reflexology massage">
+                  <img src="https://i.pinimg.com/1200x/71/a4/b7/71a4b75a19fbadf33bc6dc340e91340c.jpg" alt="Foot reflexology spa treatment">
+                  <img src="https://i.pinimg.com/1200x/2b/85/42/2b8542fd0d099c9771bb5b332d6f51a9.jpg" alt="Relaxing foot reflexology">
+                  <img src="https://i.pinimg.com/736x/76/48/7c/76487c07076e4b41fcce7c4ea35e2005.jpg" alt="Foot soak reflexology service">
+                  <img src="https://i.pinimg.com/1200x/6a/a8/16/6aa81653401306ff6509eeea39b0d422.jpg" alt="Foot massage and reflexology">
+                </div>
+              </div>
+            </div>
+            <div class="service-body">
+              <h3>Foot Soak / Reflexology</h3>
+              <p class="service-desc">
+                A grounding foot-focused session for tired feet, long workdays and guests who want
+                targeted relaxation from the ground up.
+              </p>
+              <div class="price-list">
+                <div class="price-row"><span>30 min</span><strong>$50</strong></div>
+                <div class="price-row"><span>60 min</span><strong>$70</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-media">
+              <span class="service-badge">Focused Relief</span>
+              <div class="carousel" data-count="4" aria-label="Cupping image carousel">
+                <div class="carousel-track">
+                  <img src="https://i.pinimg.com/1200x/2b/b9/25/2bb925cc8ba1e7ec30b8217e143d0335.jpg" alt="Cupping therapy massage">
+                  <img src="https://i.pinimg.com/1200x/fa/20/60/fa206044fee8dd38cebed21c4d4f616d.jpg" alt="Cupping therapy back treatment">
+                  <img src="https://i.pinimg.com/1200x/72/f0/53/72f053decc513a9d6882798d8689f0e5.jpg" alt="Cupping massage relief session">
+                  <img src="https://i.pinimg.com/1200x/f2/c8/ce/f2c8ce710d81304f810188885b9c6aa2.jpg" alt="Cupping therapy focused relief">
+                </div>
+              </div>
+            </div>
+            <div class="service-body">
+              <h3>Cupping</h3>
+              <p class="service-desc">
+                A short focused add-on style session for localized tightness and a heavier, stuck
+                feeling in specific areas.
+              </p>
+              <div class="price-list">
+                <div class="price-row"><span>15 min</span><strong>$30</strong></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="section video-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Spa Video</span>
+            <h2 class="section-title">Step into relaxation</h2>
+            <p class="section-lead">
+              A short visual preview of the calming massage atmosphere inspired by Red Rock Day Spa.
+            </p>
+          </div>
+          <div class="promo-pill">Red Rock Day Spa</div>
+        </div>
+
+        <div class="video-shell reveal" data-speed="-0.03">
+          <div class="video-brand-badge">
+            <img src="./logo.png" alt="Red Rock Day Spa logo">
+            <span>Red Rock Day Spa</span>
+          </div>
+          <iframe
+            title="Red Rock Day Spa video"
+            src="https://www.youtube.com/embed/1EACdA8qDgg?start=15&rel=0&modestbranding=1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="section booking">
+      <div class="container">
+        <div class="booking-card reveal">
+          <div class="booking-panel">
+            <span class="eyebrow" style="background:rgba(255,255,255,.16);color:#fff;border-color:rgba(255,255,255,.22)">Booking</span>
+            <h2>Book your massage online</h2>
+            <p>
+              Schedule directly through Red Rock Day Spa’s Setmore booking page.
+              Choose your service, time and details below.
+            </p>
+            <ul class="booking-list">
+              <li>Online booking embedded on this page</li>
+              <li>Open 7 days a week</li>
+              <li>Monday to Sunday, 9:00am - 10:00pm</li>
+              <li>Call: <a href="tel:+14354669999">(435) 466-9999</a></li>
+              <li>445 N Bluff Street, St. George, UT 84770</li>
+            </ul>
+
+            <div class="booking-fallback">
+              <a class="btn btn-ghost" href="https://redrockdayspa.setmore.com/" target="_blank" rel="noopener noreferrer">Open Booking Page</a>
+              <a class="btn btn-ghost" href="tel:+14354669999">Call Now</a>
+            </div>
+          </div>
+
+          <div class="booking-embed-wrap">
+            <iframe
+              title="Red Rock Day Spa Setmore Booking"
+              src="https://redrockdayspa.setmore.com/"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container">
+        <div class="reviews-head reveal">
+          <h2>What Our Patients Say</h2>
+          <p>Real reviews from real patients</p>
+        </div>
+
+        <div class="reviews-source-grid">
+          <div class="review-card-source reveal">
+            <div class="review-user">
+              <div class="avatar-wrap">
+                <span class="avatar">GV</span>
+                <div class="google-dot">
+                  <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303C33.654,32.657,29.223,36,24,36c-6.627,0-12-5.373-12-12S17.373,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20s20-8.955,20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-.792,2.237-2.231,4.166-4.087,5.571l6.19,5.238C36.971,39.205,44,34,44,24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+                </div>
+              </div>
+              <div>
+                <div class="review-name-row">
+                  <div class="review-name">Glenda Vahovick</div>
+                  <svg class="verify" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                </div>
+                <p class="review-time">13 hours ago</p>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <div class="review-text">Wonderful<br>Thanks Zoe!!!</div>
+          </div>
+
+          <div class="review-card-source reveal">
+            <div class="review-user">
+              <div class="avatar-wrap">
+                <span class="avatar">DG</span>
+                <div class="google-dot">
+                  <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303C33.654,32.657,29.223,36,24,36c-6.627,0-12-5.373-12-12S17.373,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20s20-8.955,20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-.792,2.237-2.231,4.166-4.087,5.571l6.19,5.238C36.971,39.205,44,34,44,24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+                </div>
+              </div>
+              <div>
+                <div class="review-name-row">
+                  <div class="review-name">Daniel Grimm</div>
+                  <svg class="verify" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                </div>
+                <p class="review-time">2 days ago</p>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <div class="review-text">Great experience!!!</div>
+          </div>
+
+          <div class="review-card-source reveal">
+            <div class="review-user">
+              <div class="avatar-wrap">
+                <span class="avatar">AD</span>
+                <div class="google-dot">
+                  <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303C33.654,32.657,29.223,36,24,36c-6.627,0-12-5.373-12-12S17.373,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20s20-8.955,20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-.792,2.237-2.231,4.166-4.087,5.571l6.19,5.238C36.971,39.205,44,34,44,24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+                </div>
+              </div>
+              <div>
+                <div class="review-name-row">
+                  <div class="review-name">Amy Dickerson</div>
+                  <svg class="verify" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                </div>
+                <p class="review-time">3 days ago</p>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <div class="review-text">Wonderful deep tissue with cupping. Left feeling so much better. Staff very nice and facility very clean. Will be back!</div>
+          </div>
+
+          <div class="review-card-source reveal">
+            <div class="review-user">
+              <div class="avatar-wrap">
+                <span class="avatar">BB</span>
+                <div class="google-dot">
+                  <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303C33.654,32.657,29.223,36,24,36c-6.627,0-12-5.373-12-12S17.373,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20s20-8.955,20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-.792,2.237-2.231,4.166-4.087,5.571l6.19,5.238C36.971,39.205,44,34,44,24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+                </div>
+              </div>
+              <div>
+                <div class="review-name-row">
+                  <div class="review-name">Ben B</div>
+                  <svg class="verify" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                </div>
+                <p class="review-time">6 days ago</p>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <div class="review-text">Amazing!!</div>
+          </div>
+
+          <div class="review-card-source reveal">
+            <div class="review-user">
+              <div class="avatar-wrap">
+                <span class="avatar">MH</span>
+                <div class="google-dot">
+                  <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303C33.654,32.657,29.223,36,24,36c-6.627,0-12-5.373-12-12S17.373,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20s20-8.955,20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-.792,2.237-2.231,4.166-4.087,5.571l6.19,5.238C36.971,39.205,44,34,44,24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+                </div>
+              </div>
+              <div>
+                <div class="review-name-row">
+                  <div class="review-name">Mackenzie Hendrickson</div>
+                  <svg class="verify" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                </div>
+                <p class="review-time">6 days ago</p>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <div class="review-text">Quick availability! Great massage! Amazing Price! 10/10</div>
+          </div>
+
+          <div class="review-card-source review-summary-card reveal">
+            <div class="review-rating">4.6</div>
+            <small>out of 5</small>
+            <div class="review-summary-google">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303C33.654,32.657,29.223,36,24,36c-6.627,0-12-5.373-12-12S17.373,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20s20-8.955,20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-.792,2.237-2.231,4.166-4.087,5.571l6.19,5.238C36.971,39.205,44,34,44,24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+              <span>Google Reviews</span>
+            </div>
+            <small>Based on 221 reviews</small>
+            <a href="https://www.google.com/maps/place/?q=place_id:ChIJWTyJR3lFyoARxSyMFiUnkfE" target="_blank" rel="noopener noreferrer">See All Reviews</a>
+          </div>
+        </div>
+
+        <div class="marquee-wrap reveal" aria-label="Additional guest testimonials">
+          <div class="marquee-row">
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Clean and peaceful.</strong><p>The room felt private and calm, and I left feeling completely relaxed.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Great deep tissue work.</strong><p>Exactly what I needed for tight shoulders after a long week.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Wonderful foot massage.</strong><p>The reflexology session was soothing and helped my tired feet so much.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Easy to book.</strong><p>Booked online, got a time quickly, and everything was smooth.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Relaxing atmosphere.</strong><p>Quiet, simple, and very comfortable from start to finish.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Clean and peaceful.</strong><p>The room felt private and calm, and I left feeling completely relaxed.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Great deep tissue work.</strong><p>Exactly what I needed for tight shoulders after a long week.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Wonderful foot massage.</strong><p>The reflexology session was soothing and helped my tired feet so much.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Easy to book.</strong><p>Booked online, got a time quickly, and everything was smooth.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Relaxing atmosphere.</strong><p>Quiet, simple, and very comfortable from start to finish.</p></div>
+          </div>
+
+          <div class="marquee-row reverse">
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Excellent value.</strong><p>The pricing was clear and the massage felt worth every minute.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Very relaxing Swedish massage.</strong><p>Gentle, flowing pressure and a calm space to unwind.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Nice cupping session.</strong><p>Quick focused relief for a tight spot in my back.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Comfortable spa.</strong><p>The environment was clean, quiet and easy to relax in.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Left feeling lighter.</strong><p>My body felt looser and my mind felt calmer after the session.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Excellent value.</strong><p>The pricing was clear and the massage felt worth every minute.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Very relaxing Swedish massage.</strong><p>Gentle, flowing pressure and a calm space to unwind.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Nice cupping session.</strong><p>Quick focused relief for a tight spot in my back.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Comfortable spa.</strong><p>The environment was clean, quiet and easy to relax in.</p></div>
+            <div class="mini-review"><div class="stars">★★★★★</div><strong>Left feeling lighter.</strong><p>My body felt looser and my mind felt calmer after the session.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faqs" class="section faqs">
+      <div class="container faq-grid">
+        <div class="reveal">
+          <span class="eyebrow">FAQs</span>
+          <h2 class="section-title">Before you arrive</h2>
+          <p class="section-lead">
+            A few quick answers to help you feel comfortable before your visit.
+          </p>
+        </div>
+
+        <div class="accordion reveal">
+          <div class="faq-item active">
+            <button class="faq-question" type="button">
+              <span>How early should I arrive?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Please arrive 5-10 minutes early so you have time to check in, settle in and begin your session calmly.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Can I get a massage if I have an injury?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>If you have an injury, recent surgery or medical concern, please consult your healthcare provider first and let the spa know before your session.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>What is your cancellation policy?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Please call as soon as possible if you need to change or cancel your appointment so the time can be offered to another guest.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Is there parking available?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Parking is available near the spa location at 445 N Bluff Street in St. George.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="reveal">
+          <span class="eyebrow" style="background:rgba(255,255,255,.12);color:#ffd8ea;border-color:rgba(255,255,255,.16)">Contact & Location</span>
+          <h2 class="section-title">Visit Red Rock Day Spa</h2>
+          <p class="section-lead">
+            Book online or call, then come unwind in a quiet spa space in St. George, Utah.
+          </p>
+        </div>
+
+        <div class="contact-card reveal">
+          <div class="contact-info">
+            <div class="info-block">
+              <span>Phone</span>
+              <a href="tel:+14354669999">(435) 466-9999</a>
+            </div>
+            <div class="info-block">
+              <span>Address</span>
+              <strong>445 N Bluff Street<br>St. George, UT 84770</strong>
+            </div>
+            <div class="info-block">
+              <span>Hours</span>
+              <strong>Open 7 days a week<br>Mon to Sun 9:00am - 10:00pm</strong>
+            </div>
+            <div class="info-block">
+              <span>Online Booking</span>
+              <a href="https://redrockdayspa.setmore.com/" target="_blank" rel="noopener noreferrer">redrockdayspa.setmore.com</a>
+            </div>
+          </div>
+
+          <div class="map">
+            <iframe
+              title="Red Rock Day Spa Google Map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=445%20N%20Bluff%20Street%2C%20St.%20George%2C%20UT%2084770&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Red Rock Day Spa. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".nav-links a, .nav-cta").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("open"));
+    });
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+    const parallaxEls = document.querySelectorAll("[data-speed]");
+    let ticking = false;
+
+    function updateParallax() {
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      parallaxEls.forEach(el => {
+        const speed = parseFloat(el.dataset.speed || 0);
+        const rect = el.getBoundingClientRect();
+        const elementTop = rect.top + scrollY;
+        const viewportCenter = scrollY + window.innerHeight / 2;
+        const distance = viewportCenter - elementTop;
+        const y = distance * speed;
+        el.style.transform = `translate3d(0, ${y}px, 0)`;
+      });
+
+      ticking = false;
+    }
+
+    function requestParallax() {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestParallax, { passive: true });
+    window.addEventListener("resize", requestParallax);
+    requestParallax();
+
+    document.querySelectorAll(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        document.querySelectorAll(".faq-item").forEach(other => {
+          if (other !== item) other.classList.remove("active");
+        });
+        item.classList.toggle("active");
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
